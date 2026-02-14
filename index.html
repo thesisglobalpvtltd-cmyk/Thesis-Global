@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thesis Global Pvt Ltd - Professional Academic Writing Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInDown 0.8s ease;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 1.2rem 1.8rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav ul li a:hover::after {
+            width: 80%;
+        }
+
+        nav ul li a:hover {
+            color: #764ba2;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23e0e0e0" d="M0 300L50 320L100 310L150 330L200 315L250 335L300 325L350 345L400 330L450 350L500 340L550 360L600 345L650 365L700 355L750 375L800 360L850 380L900 370L950 390L1000 375L1050 395L1100 385L1150 405L1200 390L1200 600L0 600Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease;
+        }
+
+        .services {
+            padding: 5rem 0;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-card ul {
+            margin-top: 1rem;
+            color: #666;
+            padding-left: 1.5rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.7rem;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: -1.5rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
+            background-size: cover;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .cta p {
+            position: relative;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+        }
+
+        .sample-btn {
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .sample-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.75);
+            overflow: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 3rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #999;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.05);
+        }
+
+        .close-modal:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .modal-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: #667eea;
+            margin-bottom: 2rem;
+            padding-right: 3rem;
+            font-weight: 700;
+        }
+
+        .sample-text {
+            line-height: 1.9;
+            color: #2c3e50;
+            text-align: justify;
+        }
+
+        .sample-text h3 {
+            color: #764ba2;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .sample-text ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .sample-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            font-weight: 300;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                border-bottom: 1px solid #eee;
+            }
+
+            .modal-content {
+                padding: 2rem;
+                width: 95%;
+            }
+        }
+
+        /* Scroll animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                border-bottom: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Thesis Global Pvt Ltd</h1>
+            <p>Your Partner in Academic Excellence</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#literature-review">Literature Review</a></li>
+            <li><a href="#research-proposal">Research Proposal</a></li>
+            <li><a href="#concept-paper">Concept Paper</a></li>
+            <li><a href="#thesis">Thesis</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Professional Academic Writing Services</h2>
+            <p>We provide comprehensive support for your academic journey, from literature reviews to complete thesis writing. Our expert team ensures quality, originality, and timely delivery.</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive academic support tailored to your research needs</p>
+            
+            <div class="service-grid">
+                <div class="service-card" id="literature-review">
+                    <div class="service-icon">📚</div>
+                    <h3>Literature Review</h3>
+                    <p>Comprehensive analysis and synthesis of existing research in your field. We help you identify gaps, establish context, and build a strong theoretical foundation.</p>
+                    <ul>
+                        <li>Systematic literature search</li>
+                        <li>Critical analysis of sources</li>
+                        <li>Thematic organization</li>
+                        <li>APA, MLA, Chicago formatting</li>
+                    </ul>
+                    <button class="sample-btn" onclick="showSample('lit-review')">View Sample</button>
+                </div>
+
+                <div class="service-card" id="research-proposal">
+                    <div class="service-icon">🔬</div>
+                    <h3>Research Proposal</h3>
+                    <p>Well-structured proposals that clearly articulate your research objectives, methodology, and significance. Get approval from your committee with confidence.</p>
+                    <ul>
+                        <li>Problem statement development</li>
+                        <li>Research questions formulation</li>
+                        <li>Methodology design</li>
+                        <li>Timeline and budget planning</li>
+                    </ul>
+                    <button class="sample-btn" onclick="showSample('proposal')">View Sample</button>
+                </div>
+
+                <div class="service-card" id="concept-paper">
+                    <div class="service-icon">💡</div>
+                    <h3>Concept Paper</h3>
+                    <p>Concise and compelling concept papers that effectively communicate your research idea. Perfect for securing funding or initial project approval.</p>
+                    <ul>
+                        <li>Clear problem identification</li>
+                        <li>Objectives and goals setting</li>
+                        <li>Preliminary methodology outline</li>
+                        <li>Expected outcomes description</li>
+                    </ul>
+                    <button class="sample-btn" onclick="showSample('concept')">View Sample</button>
+                </div>
+
+                <div class="service-card" id="thesis">
+                    <div class="service-icon">🎓</div>
+                    <h3>Complete Thesis</h3>
+                    <p>End-to-end thesis writing support from conception to final submission. We ensure your thesis meets all academic standards and contributes meaningfully to your field.</p>
+                    <ul>
+                        <li>Full thesis writing & editing</li>
+                        <li>Data analysis & interpretation</li>
+                        <li>Citations & bibliography</li>
+                        <li>Plagiarism-free guarantee</li>
+                    </ul>
+                    <button class="sample-btn" onclick="showSample('thesis')">View Sample</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Ready to Begin Your Academic Journey?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">Contact us today for a free consultation</p>
+            <a href="mailto:thesisglobal@gmail.com" class="cta-button">Get Started Now</a>
+            <p style="margin-top: 1.5rem; font-size: 1rem;">📧 thesisglobal@gmail.com | 📞 +91-7668764663</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Thesis Global Pvt Ltd. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">Email: thesisglobal@gmail.com | Phone: +91-7668764663</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Samples -->
+    <div id="sampleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        const samples = {
+            'lit-review': {
+                title: 'Literature Review Sample',
+                content: `
+                    <div class="sample-text">
+                        <h3>Executive Coaching and Leadership Development</h3>
+                        <p><strong>1. Introduction</strong></p>
+                        <p>In the modern business environment, executive coaching has become an essential technique for increasing the decisions and resilience among C-suite leaders. The pace of technological revolution, economic uncertainty, and the global competitive environment have exacerbated the demand on executives to perform with competence under uncertainty.</p>
+                        
+                        <h3>2. Key Ideas, Theories, and Concepts</h3>
+                        <p>Executive coaching is based on works of many theoretical models which state that goal-oriented, structured, and well-organized conversation can lead to the development of leadership competence, self-knowledge and performance.</p>
+                        
+                        <p><strong>2.1 Emotional Intelligence Framework</strong></p>
+                        <p>Goleman (2000, 2004) identifies serving as leading predictors of success as a leader are emotional intelligence (EI), self-knowledge, sympathy, and social abilities. Executive coaching focuses on these dimensions to increase the tendency to make decisions under stress and gain resilience in the face of organizational adversity.</p>
+                        
+                        <p><strong>2.2 Adult Learning and Experiential Learning Theories</strong></p>
+                        <p>The practice of coaching is supported by the theory of adult learning and models of experiential learning (Kolb's learning cycle). These theories look upon leaders as participants in their own growth and learn through reflection and feedback applied to real-life scenarios.</p>
+                        
+                        <h3>3. Areas of Convergence in the Literature</h3>
+                        <p><strong>3.1 Positive Impact on Performance and Well-being</strong></p>
+                        <p>Meta-analyses consistently report moderate to large effect sizes for coaching interventions on performance improvement (d = 0.43 to 1.24), well-being enhancement (d = 0.46), and goal attainment (d = 0.74) (Theeboom et al., 2014; Jones et al., 2016).</p>
+                        
+                        <p><strong>3.2 Importance of the Coaching Relationship</strong></p>
+                        <p>The quality of the coaching relationship is a critical success factor. De Haan et al. (2013) established that the relationship quality explained significant variance in coaching outcomes, often more than particular coaching methods or approaches.</p>
+                        
+                        <h3>4. Gaps and Limitations</h3>
+                        <ul>
+                            <li>Many studies rely on self-reported outcomes and lack rigorous longitudinal or experimental designs</li>
+                            <li>Limited consensus on mechanisms through which coaching provides its effects</li>
+                            <li>Research context is predominantly Western corporate environments</li>
+                            <li>Individual differences that moderate coaching effectiveness need more attention</li>
+                        </ul>
+                        
+                        <h3>5. Future Research Directions</h3>
+                        <p>To address identified gaps, promising research directions include longitudinal designs, mechanism-based research, cross-cultural studies, individual differences exploration, and development of objective measures beyond self-report data.</p>
+                        
+                        <p><em>This sample demonstrates the structure and depth expected in a comprehensive literature review.</em></p>
+                    </div>
+                `
+            },
+            'proposal': {
+                title: 'Research Proposal Sample',
+                content: `
+                    <div class="sample-text">
+                        <h3>Constraint Management in Construction Projects: A Comprehensive Framework</h3>
+                        
+                        <p><strong>Chapter 1: Introduction</strong></p>
+                        <p>Every construction project is unique and has its own operating environment and sets of technical requirements. As a result, the execution of a construction project is subject to numerous constraints that limit the commencement or progression of field operations, which invariably have significant negative impact on overall project performance.</p>
+                        
+                        <p>By definition, constraints refer to any condition, such as temporal/spatial limitations and safety/quality concerns, which may prevent a project to achieve its goals. Successful execution and control of a construction project relies on effective identification and management of constraints through master planning and short-term look-ahead scheduling.</p>
+                        
+                        <p><strong>Chapter 2: Problem Statement</strong></p>
+                        <p>The importance of developing a constraint-free and reliable work plan has long been recognized by the industry. However, numerous construction projects are still plagued by delays and cost overruns, which can frequently be traced to ineffective identification and treatment of constraints.</p>
+                        
+                        <p>The following research questions need to be addressed:</p>
+                        <ul>
+                            <li>What are the typical constraints found in various construction projects?</li>
+                            <li>How to classify these constraints for easier identification and modeling?</li>
+                            <li>What are the current industry practices and research advancements in modeling and resolving constraints?</li>
+                            <li>How to unify the constraint classification knowledge and various constraint modeling efforts into a framework for total constraint management?</li>
+                        </ul>
+                        
+                        <p><strong>Chapter 3: Objectives</strong></p>
+                        <p>The long-term goal of the research is to develop a formalized constraint management system. The objective of the current study is to provide a comprehensive review of literature and industry practices in relation to constraint analysis and outline a conceptual framework for constraint management.</p>
+                        
+                        <p>Sub-objectives include:</p>
+                        <ol>
+                            <li>Provide a comprehensive review of sources and characteristics of constraints</li>
+                            <li>Develop a constraint classification method for easier identification and modeling</li>
+                            <li>Review current industry practices and research in constraint modeling</li>
+                            <li>Outline a conceptual framework for total constraint management</li>
+                        </ol>
+                        
+                        <p><strong>Chapter 4: Methodology</strong></p>
+                        <p>The primary research method for this study is literature review and conceptual modeling. This study will first review various types of constraints in construction and their characteristics. Based on this understanding, a classification method will be developed to categorize constraint factors for the purpose of constraint identification and modeling.</p>
+                        
+                        <p>The study will be conducted between September 2020 and May 2021.</p>
+                        
+                        <p><em>This sample demonstrates a well-structured research proposal with clear objectives and methodology.</em></p>
+                    </div>
+                `
+            },
+            'concept': {
+                title: 'Concept Paper Sample',
+                content: `
+                    <div class="sample-text">
+                        <h3>Business Owners' Cultural Orientation and SME Growth: A Liberian Case Study</h3>
+                        
+                        <p><strong>Introduction</strong></p>
+                        <p>The role of small and medium-sized enterprises (SME) in driving economic development is vital, especially in developing and emerging economies (Heydari & Khoshnood, 2019). Each year, multi-billion dollar worth of aid is devoted to fostering the growth of SMEs in developing countries.</p>
+                        
+                        <p>Nearly 80% of all formal Liberian firms employ fewer than 20 people, with only 13% employing between 20 and 100 people. With 60% of the population under 25 and 70% in the informal sector, understanding how SMEs operate is both academically significant and critical for business practitioners.</p>
+                        
+                        <p><strong>Significance of the Study</strong></p>
+                        <p>This study is significant as it seeks to find which cultural dimensions lead to SME growth in Liberia. Culture is an important aspect of societies and organizations. To develop an understanding of what societies value, we need to understand the cultural norms and values that drive individual members.</p>
+                        
+                        <p>Unique aspects of this study:</p>
+                        <ul>
+                            <li>Focuses on individual cultural orientations rather than societal analysis</li>
+                            <li>Examines which of the seven GLOBE cultural dimensions has the most impact on SME growth</li>
+                            <li>Addresses the research gap on entrepreneurship in Africa</li>
+                            <li>Provides empirical data that could help solve African challenges like youth unemployment and poverty</li>
+                        </ul>
+                        
+                        <p><strong>Literature Review</strong></p>
+                        <p>Three broad approaches to culture and entrepreneurship research exist:</p>
+                        
+                        <p>1. <strong>National Culture and Entrepreneurship:</strong> Research shows that for entrepreneurs to emerge, social conditions must grant them acceptance and recognize their activities as legitimate and beneficial (Radziszewska, 2014).</p>
+                        
+                        <p>2. <strong>Culture and Entrepreneurial Characteristics:</strong> Studies show entrepreneurs thrive in cultures endorsing charismatic leadership while also tolerating self-protective attributes (Stephen & Pathak, 2007).</p>
+                        
+                        <p>3. <strong>National Culture and Corporate Entrepreneurship:</strong> Research examines how national culture affects financial risk-taking in corporations, with findings suggesting individualistic cultures associate with greater risk-taking in R&D (Shao et al., 2013).</p>
+                        
+                        <p><strong>Conclusion</strong></p>
+                        <p>The literature shows that entrepreneurs do not emerge independently of their environment. Cultural practices must recognize and celebrate entrepreneurial risks. This study will expand theoretical understanding of entrepreneurship by providing context-specific research in Africa, offering potential to develop generalizable theories across different contexts.</p>
+                        
+                        <p><em>This sample demonstrates a concise concept paper that effectively communicates the research idea and its significance.</em></p>
+                    </div>
+                `
+            },
+            'thesis': {
+                title: 'Complete Thesis Sample - Chapter Excerpt',
+                content: `
+                    <div class="sample-text">
+                        <h3>Automated Scaling of Generative AI Agents: A Semantic-Aware Framework</h3>
+                        
+                        <p><strong>Chapter I: Introduction</strong></p>
+                        
+                        <p><strong>1.1 Introduction</strong></p>
+                        <p>Over the past decade, the course of artificial intelligence (AI) has abruptly changed as discriminative models designed to classify and predict have been replaced by generative models that can synthesize, reason, and produce inventive content. Large Language Models (LLMs) have represented the foundation of this change and essentially changed the interaction paradigm between machines and humans (Bommasani et al., 2021).</p>
+                        
+                        <p>The present frontier of research is no longer just about the capacities of a single model taking a response to a prompt, but has switched to the design and operation of AI Agents—autonomous systems able to perceive, reason, use tools, and execute actions. As organizations look to move these agents to production environments to handle workloads at enterprise-level scale, systemic scalability is the challenge, not model capability.</p>
+                        
+                        <p><strong>1.1.1 The Evolution from Static Models to Dynamic Agents</strong></p>
+                        <p>An AI Agent is a complex system that employs an LLM as a kernel of central cognition, but encloses it within a scaffold of functional abilities. According to Wang et al. (2024), an agentic system includes four key elements:</p>
+                        <ul>
+                            <li>Profiling (definition of roles)</li>
+                            <li>Memory (retrieval in short-run and long-run)</li>
+                            <li>Planning (partitioning complex goals into sub-tasks)</li>
+                            <li>Action (use of tools)</li>
+                        </ul>
+                        
+                        <p><strong>1.2 Research Problem</strong></p>
+                        <p>Although scaling of Generative AI agents is occurring remarkably fast in pilot settings, the transfer to mass production is stalled by a critical mismatch between features of agentic workloads and current cloud infrastructure scaling paradigms. The research question addresses what makes autonomous AI agents so ineffective with autoscaling mechanisms designed for deterministic, stateless microservices.</p>
+                        
+                        <p>The misalignment occurs in four important dimensions:</p>
+                        <ul>
+                            <li>Metric inadequacy</li>
+                            <li>Latency-cost hysteresis</li>
+                            <li>State fragmentation</li>
+                            <li>Noisy neighbor effect in multi-tenant inference</li>
+                        </ul>
+                        
+                        <p><strong>1.3 Purpose of Research</strong></p>
+                        <p>The main objective is to design, develop, and test a Semantic-Aware Automated Scaling Framework (SAASF) specifically designed for Generative AI Agent environments. The framework will make scaling decisions based on the purposes and intricacy of agentic workload, rather than on resource consumption alone.</p>
+                        
+                        <p><strong>Chapter IV: Results (Excerpt)</strong></p>
+                        
+                        <p><strong>4.2 Preliminary Analysis of Production Trace Data</strong></p>
+                        <p>This research is based on detailed analysis of production trace data consisting of over 15 million agent execution records over a six-month period. The temporal distribution analysis showed high non-homogeneity in arrival patterns, with a coefficient of variation exceeding 1.65, indicating the necessity of an adaptive, predictive scaling solution.</p>
+                        
+                        <p><strong>Table 4.1: Correlation Matrix of Key Features vs. Inference Time</strong></p>
+                        <ul>
+                            <li>CPU Utilization: r = 0.45</li>
+                            <li>Input Token Count: r = 0.62</li>
+                            <li>Data Dependency: r = 0.78</li>
+                            <li>Semantic Depth: r = 0.85</li>
+                        </ul>
+                        
+                        <p>Results showed Semantic Depth (SD) was most significantly associated with resource utilization and total inference time (r = 0.85), far greater than simple input token count correlation.</p>
+                        
+                        <p><strong>Chapter VI: Summary and Implications</strong></p>
+                        
+                        <p>The SAASF framework successfully resolved theoretical discontinuities and provided conclusive answers to all research questions:</p>
+                        <ul>
+                            <li>Achieved exceptionally low SLO violation rate of 0.12% (70.8× improvement over Standard HPA)</li>
+                            <li>Demonstrated 40.3% reduction in allocated Pod-Hours compared to Static Baseline</li>
+                            <li>Operated with high stability at only 0.2 Pod Oscillations per hour</li>
+                        </ul>
+                        
+                        <p>This research establishes a new paradigm for resource orchestration in autonomous AI systems, with significant implications for both cloud computing infrastructure and applied machine learning.</p>
+                        
+                        <p><em>This sample demonstrates the comprehensive structure and academic rigor expected in a complete doctoral thesis.</em></p>
+                    </div>
+                `
+            }
+        };
+
+        function showSample(type) {
+            const modal = document.getElementById('sampleModal');
+            const modalBody = document.getElementById('modalBody');
+            const sample = samples[type];
+            
+            modalBody.innerHTML = `<h2>${sample.title}</h2>${sample.content}`;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('sampleModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('sampleModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
